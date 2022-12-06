@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+
+cd web
+yarn lint-staged 
+#yarn tsc --noEmit && yarn eslint . && yarn prettier --write .
+#npm run lint
+
+cd ../server
+yarn lint-staged -v
+#yarn tsc --noEmit && yarn eslint . --fix && yarn prettier --write .
+#npm run lint
