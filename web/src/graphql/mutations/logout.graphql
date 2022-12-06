@@ -1,0 +1,10 @@
+mutation Logout($input: LoginInput!) {
+  logout {
+    error {
+      ...ErrorFragment
+    }
+    user {
+      ...UserFragment
+    }
+  }
+}

@@ -1,0 +1,24 @@
+query GetGameQuestion($input: PreviousQuizResponseInput!) {
+  getGameQuestion(input: $input) {
+    error {
+      field
+      message
+    }
+    quiz {
+      id
+      movie {
+        movieImage
+        movieName
+      }
+      actor {
+        actorImage
+        actorName
+      }
+    }
+    game {
+      isGameOver
+      noQuestionAnswered
+      lastQuestionId
+    }
+  }
+}

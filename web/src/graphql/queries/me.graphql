@@ -1,0 +1,13 @@
+query GetMe {
+  me {
+    error {
+      ...ErrorFragment
+    }
+    user {
+      ...UserFragment
+      quizResult {
+        ...QuizeResultFragment
+      }
+    }
+  }
+}
